@@ -30,8 +30,10 @@ export default function RootLayout({ children }) {
           <nav>
             <NavbarComponent />
           </nav>
-          <div >{children}</div>
-         <Footer/>
+          <div>
+           {children}
+          </div>
+          <Footer />
         </Providers>
       </body>
     </html>

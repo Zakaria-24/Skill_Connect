@@ -41,7 +41,9 @@ export default function JobPost() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    console.log(data);
+  };
 
   return (
     <div className="mx-10 flex items-center flex-col my-10">
@@ -72,7 +74,9 @@ export default function JobPost() {
                 color="primary"
                 placeholder="Enter your description"
                 className="max-w-[500px]"
+                {...register("textarea")}
               />
+              {errors.textarea && <span>Title is required</span>}
               <div className="flex w-full items-center justify-center flex-wrap md:flex-nowrap gap-4">
                 <DatePicker
                   label="Project Deadline"
